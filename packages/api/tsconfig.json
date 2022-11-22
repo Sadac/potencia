@@ -8,6 +8,6 @@
     "sourceMap": true,
     "outDir": "dist"
   },
-  "include": ["src", "packages/database"],
+  "include": ["src"],
   "exclude": ["node"]
 }

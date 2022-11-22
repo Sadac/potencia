@@ -4,7 +4,7 @@
   "description": "Potencia API Module",
   "main": "app.ts",
   "scripts": {
-    "dev": "nodemon src/server.ts",
+    "dev": "nodemon src/app.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --ignore-path .eslintignore --ext .js,.ts",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\""
