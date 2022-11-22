@@ -1,0 +1,42 @@
+{
+  "name": "potencia-api",
+  "version": "1.0.0",
+  "description": "Potencia API Module",
+  "main": "app.ts",
+  "scripts": {
+    "dev": "nodemon src/server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --ignore-path .eslintignore --ext .js,.ts",
+    "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sadac/potencia"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sadac/potencia/issues"
+  },
+  "homepage": "https://github.com/Sadac/potencia#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.14",
+    "@types/node": "^18.11.9",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "eslint": "^8.26.0",
+    "eslint-config-prettier": "^8.5.0",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.7.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "knex": "^2.3.0",
+    "pg": "^8.8.0"
+  }
+}
