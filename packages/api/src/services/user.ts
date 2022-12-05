@@ -1,9 +1,12 @@
-import userDao from '../dao/user'
+import userDao from '../dao/users'
+import { UserDto } from './../dao/types'
 
 class UserService {
-  // @ts-ignore
-  static async createUser(userDto) {
-    return userDao.createUser(userDto)
+  static async createUser(userDto: UserDto) {
+    const user = userDao.createUser(userDto)
+    console.log(user)
+
+    return user
   }
 
   static async getUser(id: string) {

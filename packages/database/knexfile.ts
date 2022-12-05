@@ -1,6 +1,6 @@
 import type { Knex } from 'knex'
 import * as dotenv from 'dotenv'
-dotenv.config({ path: './../../.env' })
+dotenv.config({ path: './.env' })
 
 const {
   DB_CLIENT,
@@ -9,6 +9,7 @@ const {
   DB_NAME,
   DB_DEV_MIN_POOL,
   DB_DEV_MAX_POOL,
+  MIGRATIONS_TABLE,
 } = process.env
 
 const knexfile: { [key: string]: Knex.Config } = {
@@ -20,11 +21,11 @@ const knexfile: { [key: string]: Knex.Config } = {
       password: DB_PASSWORD,
     },
     pool: {
-      min: parseInt(DB_DEV_MIN_POOL),
-      max: parseInt(DB_DEV_MAX_POOL),
+      min: parseInt(DB_DEV_MIN_POOL as string),
+      max: parseInt(DB_DEV_MAX_POOL as string),
     },
     migrations: {
-      tableName: 'knex_migrations',
+      tableName: MIGRATIONS_TABLE,
     },
   },
 

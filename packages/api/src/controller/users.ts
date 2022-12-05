@@ -1,10 +1,11 @@
 import { Request, Response } from 'express'
 import userService from '../services/user'
+import { UserDto } from '../dao/types'
 
 class UserController {
   static async createUser(req: Request, res: Response) {
     try {
-      const userData = req.body
+      const userData: UserDto = req.body
 
       const id = await userService.createUser(userData)
 

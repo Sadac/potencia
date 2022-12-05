@@ -1,8 +1,8 @@
 import * as dotenv from 'dotenv'
-dotenv.config({ path: './../../.env' })
+dotenv.config({ path: './../.env' })
 import { Knex } from 'knex'
 
-const { USERS_TABLE } = process.env
+const USERS_TABLE = process.env.USERS_TABLE!
 
 export async function up(knex: Knex): Promise<void> {
   await knex.raw('create extension if not exists "uuid-ossp"')

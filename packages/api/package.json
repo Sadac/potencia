@@ -2,10 +2,10 @@
   "name": "potencia-api",
   "version": "1.0.0",
   "description": "Potencia API Module",
-  "main": "app.ts",
+  "main": "index.ts",
   "scripts": {
-    "dev": "nodemon src/app.ts",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/index.ts",
+    "test": "jest",
     "lint": "eslint --ignore-path .eslintignore --ext .js,.ts",
     "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\""
   },
@@ -22,11 +22,13 @@
   "homepage": "https://github.com/Sadac/potencia#readme",
   "devDependencies": {
     "@types/express": "^4.17.14",
+    "@types/jest": "^29.2.3",
     "@types/node": "^18.11.9",
     "@typescript-eslint/eslint-plugin": "^5.42.0",
     "@typescript-eslint/parser": "^5.42.0",
     "eslint": "^8.26.0",
     "eslint-config-prettier": "^8.5.0",
+    "jest": "^29.3.1",
     "nodemon": "^2.0.20",
     "prettier": "^2.7.1",
     "ts-node": "^10.9.1",

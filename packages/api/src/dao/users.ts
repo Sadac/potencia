@@ -2,11 +2,11 @@ import * as dotenv from 'dotenv'
 dotenv.config({ path: './../../.env' })
 const { USERS_TABLE } = process.env
 
-import { UserData } from '../../../database/interfaces/User'
+import { UserDto } from './types'
 import db from '../../../database/db'
 
 class User {
-  async createUser(userDto: UserData) {
+  async createUser(userDto: UserDto) {
     const { firstName, lastName, email, password, dateOfBirth } = userDto
     const [result] = await db(USERS_TABLE)
       .insert({
